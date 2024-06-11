@@ -1,0 +1,57 @@
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark" />
+  <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+  />
+  <style>
+    canvas {
+      position: absolute;
+    }
+    #canvas-image {
+      z-index: 1;
+    }
+    #canvas-text{
+      z-index: 2;
+    }
+  </style>
+  <title>MEME Me</title>
+</head>
+<body  class="container">
+<header>
+  <h1>MEME Me</h1>
+</header>
+<main>
+  <div class="grid">
+    <div>
+      <div id="options" style="display: flex;flex-direction: column;justify-content: center;gap: 1rem">
+        <div id="dark-mode">
+          <label>
+            <input type="checkbox" id="toggle" name="toggle" role="switch" checked>
+            Use dark mode
+          </label>
+        </div>
+        <div id="words">
+          <input type="text" id="up-text" placeholder="up text" aria-label="Text" />
+          <input type="text" id="down-text" placeholder="down text" aria-label="Text" />
+        </div>
+        <div id="download">
+          <label >
+            <input type="button" id="download-button" value="Download Meme">
+          </label>
+        </div>
+      </div>
+    </div>
+    <div id="meme">
+      <canvas id="merge" hidden></canvas>
+      <canvas id="canvas-text"></canvas>
+      <canvas id="canvas-image"></canvas>
+    </div>
+  </div>
+</main>
+</body>
+<script type="module" src="src/main.js"></script>
+</html>

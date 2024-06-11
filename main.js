@@ -1,5 +1,5 @@
-import {Modal} from "./modal.js";
-import * as Camera from "./camera.js";
+import {Modal} from "./src/modal.js";
+import * as Camera from "./src/camera.js";
 
 const CANVAS_TEXT_DEFAULT_WIDTH = 480;
 const CANVAS_TEXT_DEFAULT_HEIGHT = 480;
